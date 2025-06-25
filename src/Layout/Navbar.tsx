@@ -9,6 +9,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { useAppDispatch } from "@/hooks/useRedux";
 import { logout } from "@/store/Slices/AuthSlice/authSlice";
+import logoImg from "@/assets/navbar/Union.png";
 
 const Navbar: React.FC = () => {
   const navigate = useNavigate();
@@ -26,13 +27,17 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-website-color-green shadow-lg">
+    <nav className="bg-white/80 shadow-lg sticky top-0">
       <div className=" mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="text-white text-2xl font-bold">
-              MyApp
+            <Link
+              to="/"
+              className="text-black text-2xl font-bold flex items-center gap-3"
+            >
+              <img src={logoImg} alt="" className="w-8 h-8" />
+              <span className="font-bricolage">Az Deal Hub</span>
             </Link>
           </div>
 
@@ -40,29 +45,36 @@ const Navbar: React.FC = () => {
           <div className="hidden md:flex space-x-4">
             <Link
               to="/"
-              className="text-white hover:bg-website-color-lightGray hover:text-black px-3 py-2 rounded-md text-sm font-medium"
+              className=" hover:bg-website-color-lightGray hover:text-black px-3 py-2 rounded-md text-sm font-medium"
             >
               Home
             </Link>
             <Link
               to="/about"
-              className="text-white hover:bg-website-color-lightGray hover:text-black px-3 py-2 rounded-md text-sm font-medium"
+              className=" hover:bg-website-color-lightGray hover:text-black px-3 py-2 rounded-md text-sm font-medium"
             >
               About
             </Link>
             <Link
-              to="/services"
-              className="text-white hover:bg-website-color-lightGray hover:text-black px-3 py-2 rounded-md text-sm font-medium"
+              to="/team"
+              className=" hover:bg-website-color-lightGray hover:text-black px-3 py-2 rounded-md text-sm font-medium"
             >
-              Services
+              Team
             </Link>
             <Link
               to="/contact"
-              className="text-white hover:bg-website-color-lightGray hover:text-black px-3 py-2 rounded-md text-sm font-medium"
+              className=" hover:bg-website-color-lightGray hover:text-black px-3 py-2 rounded-md text-sm font-medium"
             >
               Contact
             </Link>
-
+            <Link
+              to="/blog"
+              className=" hover:bg-website-color-lightGray hover:text-black px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Blog
+            </Link>
+          </div>
+          <div>
             <Popover>
               <PopoverTrigger>
                 <UserAvatar userName="Mahim" />
