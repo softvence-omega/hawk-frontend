@@ -3,6 +3,7 @@ import banner from "../../public/banner img.png";
 import CommonWrapper from "@/common/CommonWrapper";
 import ReviewSection from "@/components/home/ReviewSection";
 import AuctionSearch from "@/components/Auction/AuctionSearch";
+import PerfectHome from "@/components/home/PerfectHome";
 
 const Home = () => {
   const cardData = [
@@ -85,6 +86,7 @@ const Home = () => {
         </div>
       </CommonWrapper>
       <ReviewSection></ReviewSection>
+      <PerfectHome />
     </div>
   );
 };
