@@ -9,7 +9,10 @@ import AdminDashboard from "@/pages/Admin/AdminDashboard";
 import Login from "@/pages/Login";
 import Signup from "@/pages/Signup";
 import Form from "@/pages/Form";
-import Services from "@/pages/Services";
+import Team from "@/pages/Team";
+import Auction from "@/pages/Auction";
+import HomeDetails from "@/pages/HomeDetails";
+import Comp from "@/pages/Comp";
 
 const routes = createBrowserRouter([
   {
@@ -29,8 +32,20 @@ const routes = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: "/services",
-        element: <Services />,
+        path: "/team",
+        element: <Team />,
+      },
+      {
+        path: "/auction",
+        element: <Auction />,
+      },
+      {
+        path: "/homeDetails/:id",
+        element: <HomeDetails />,
+      },
+      {
+        path: "/comps/:id",
+        element: <Comp />,
       },
       {
         path: "/form",
