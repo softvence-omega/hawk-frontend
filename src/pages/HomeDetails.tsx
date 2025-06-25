@@ -1,5 +1,13 @@
+import Description from "@/components/details/Description";
+import HomeDetailsComponent from "@/components/details/HomeDetailsComponent";
+
 const HomeDetails = () => {
-  return <div>HomeDetails</div>;
+  return (
+    <div>
+      <HomeDetailsComponent />
+      <Description/>
+    </div>
+  );
 };
 
 export default HomeDetails;
