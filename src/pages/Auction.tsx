@@ -13,7 +13,7 @@ const Auction = () => {
   return (
     <div>
       <AuctionSearch />
-      <div className="flex mx-3">
+      <div className="flex mx-3 gap-2">
         {/* iframe  */}
         <div className="w-1/2">
           <div className="h-[500px]">
