@@ -1,6 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
 @import "tailwindcss";
 
 @theme {
+  /* font  */
+  --font-lexend: "Lexend", sans-serif;
+  --font-bricolage: "Bricolage Grotesque", sans-serif;
+
+  /* color  */
+  --color-primary-button: #0041d9;
+
   --color-website-color-black: #212a31;
   --color-website-color-darkGray: #2e3944;
   --color-website-color-lightGray: #d3d9d4;
