@@ -3,7 +3,7 @@ import App from "../App";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 import NotFound from "../pages/NotFound";
-import Home from "../pages/Home";
+
 import AdminRoute from "./AdminRoutes";
 import AdminDashboard from "@/pages/Admin/AdminDashboard";
 import Login from "@/pages/Login";
@@ -13,6 +13,7 @@ import Team from "@/pages/Team";
 import Auction from "@/pages/Auction";
 import HomeDetails from "@/pages/HomeDetails";
 import Comp from "@/pages/Comp";
+import Home from "@/pages/Home";
 
 const routes = createBrowserRouter([
   {
@@ -21,7 +22,7 @@ const routes = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
+        element:<Home></Home>,
       },
       {
         path: "/about",

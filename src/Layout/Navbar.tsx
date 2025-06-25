@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { useAppDispatch } from "@/hooks/useRedux";
 import { logout } from "@/store/Slices/AuthSlice/authSlice";
 import logoImg from "@/assets/navbar/Union.png";
+import CommonWrapper from "@/common/CommonWrapper";
 
 const Navbar: React.FC = () => {
   const navigate = useNavigate();
@@ -28,7 +29,8 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="bg-white/80 shadow-lg sticky top-0">
-      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
+      <CommonWrapper>
+        <div className=" mx-auto px-4 sm:px-6 lg:px-8 py-[24px]">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -53,7 +55,7 @@ const Navbar: React.FC = () => {
               to="/about"
               className=" hover:bg-website-color-lightGray hover:text-black px-3 py-2 rounded-md text-sm font-medium"
             >
-              About
+              About Us
             </Link>
             <Link
               to="/team"
@@ -75,19 +77,10 @@ const Navbar: React.FC = () => {
             </Link>
           </div>
           <div>
-            <Popover>
-              <PopoverTrigger>
-                <UserAvatar userName="Mahim" />
-              </PopoverTrigger>
-              <PopoverContent className="mr-3 bg-website-color-darkGray border-none text-white">
-                <Button
-                  onClick={handleLogout}
-                  className="bg-website-color-lightGray text-black w-full"
-                >
-                  Logout
-                </Button>
-              </PopoverContent>
-            </Popover>
+            <div className="flex gap-[10px]">
+              <button className="border px-[24px] py-[16px] rounded">Login/Register</button>
+              <button className="border px-[24px] py-[16px] rounded bg-linear-to-r from-[#2F6DFD] to-[#0041D9] text-white">Get Comp</button>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -123,6 +116,7 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       </div>
+      </CommonWrapper>
 
       {/* Mobile Menu */}
       {isOpen && (
