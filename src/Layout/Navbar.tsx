@@ -73,6 +73,12 @@ const Navbar: React.FC = () => {
               >
                 Blog
               </Link>
+              <Link
+                to="/auction"
+                className=" hover:bg-website-color-lightGray hover:text-black px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Auction
+              </Link>
             </div>
             <div>
               <div className="flex gap-[10px]">

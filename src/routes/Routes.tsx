@@ -14,6 +14,7 @@ import Auction from "@/pages/Auction";
 import HomeDetails from "@/pages/HomeDetails";
 import Comp from "@/pages/Comp";
 import Home from "@/pages/Home";
+import Blog from "@/pages/Blog";
 
 const routes = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const routes = createBrowserRouter([
       {
         path: "/team",
         element: <Team />,
+      },
+      {
+        path: "/blog",
+        element: <Blog />,
       },
       {
         path: "/auction",
