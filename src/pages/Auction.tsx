@@ -2,12 +2,7 @@ import ActiveComps from "@/components/Auction/ActiveComps";
 import AuctionSearch from "@/components/Auction/AuctionSearch";
 import SoldComps from "@/components/Auction/SoldComps";
 import { FaArrowCircleDown } from "react-icons/fa";
-import footerImage from "@/assets/footer-image/footer-art.svg.png";
-import logo from "@/assets/navbar/Union.png";
-import footerIcon1 from "@/assets/footer-icons/SocialIcons1.svg";
-import footerIcon2 from "@/assets/footer-icons//SocialIcons2.svg";
-import footerIcon3 from "@/assets/footer-icons/SocialIcons3.svg";
-import footerIcon4 from "@/assets/footer-icons/SocialIcons4.svg";
+import LoginFooter from "@/Layout/LoginFooter";
 
 const Auction = () => {
   return (
@@ -58,7 +53,7 @@ const Auction = () => {
         </div>
       </div>
 
-      <div className="mt-96">
+      {/* <div className="mt-96">
         <div className="mb-24 flex justify-center items-center gap-4">
           <img src={logo} alt="" />
           <span className="text-xl font-semibold">AZ Deal Hub</span>
@@ -72,7 +67,8 @@ const Auction = () => {
           </div>
         </div>
         <img src={footerImage} alt="" className="w-full" />
-      </div>
+      </div> */}
+      <LoginFooter />
     </div>
   );
 };
