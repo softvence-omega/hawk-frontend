@@ -2,7 +2,7 @@ import img from "../../assets/detailsImage/image.png";
 
 export default function HomeDetailsComponent() {
   return (
-     <div className="flex flex-col md:flex-col px-4 sm:px-6 lg:px-8 lg:flex-row overflow-hidden w-full max-w-full mx-auto h-auto lg:h-[700px] mt-8 mb-8">
+     <div className="flex flex-col md:flex-col px-4 sm:px-6 lg:px-8 lg:flex-row overflow-hidden w-full max-w-full mx-auto h-auto lg:h-[700px] mt-10 mb-10">
       {/* Left Image */}
       <div className="w-full lg:w-[65%] lg:h-[700px] ">
         <img

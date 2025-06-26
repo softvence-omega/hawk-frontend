@@ -1,22 +1,19 @@
-import {
-  FaBath,
-  FaBed,
-  FaBolt,
-  FaCar,
-  FaFire,
-  FaHome,
-  FaWifi,
-} from "react-icons/fa";
 import Features from "./Features";
 
+import bathrm from "../../assets/icons/Bathroom.svg";
+import bedr from "../../assets/icons/bed.svg";
+import frm from "../../assets/icons/Frame.svg";
+import parking from "../../assets/icons/parking.svg";
+import swimm from "../../assets/icons/swimmingPool.svg";
+import wifi from "../../assets/icons/wifi.svg";
+
 const propertyIcons = [
-  { icon: <FaHome />, label: "1200 sqft" },
-  { icon: <FaBed />, label: "4" },
-  { icon: <FaBath />, label: "3" },
-  { icon: <FaCar />, label: "" },
-  { icon: <FaWifi />, label: "" },
-  { icon: <FaBolt />, label: "" },
-  { icon: <FaFire />, label: "" },
+  { icon: frm, label: "1200 sqft" }, // Area
+  { icon: bedr, label: "4" },        // Bedroom
+  { icon: bathrm, label: "3" },      // Bathroom
+  { icon: parking, label: "" },      // Parking
+  { icon: wifi, label: "" },         // Wifi
+  { icon: swimm, label: "" },        // Pool
 ];
 
 const analyzerStats = [
@@ -40,7 +37,8 @@ export default function Description() {
         <div className="flex flex-wrap justify-between gap-4 text-gray-700 text-sm border-b border-[#D1D1D5] pb-6">
           {propertyIcons.map((item, index) => (
             <div key={index} className="flex items-center gap-2">
-              {item.icon} {item.label}
+              <img src={item.icon} alt="icon" className="w-5 h-5" />
+              {item.label && <span>{item.label}</span>}
             </div>
           ))}
         </div>
@@ -108,14 +106,16 @@ export default function Description() {
             <div className="flex items-center gap-8">
               {propertyIcons.slice(0, 3).map((item, index) => (
                 <div key={index} className="flex items-center gap-2">
-                  {item.icon} {item.label}
+                  <img src={item.icon} alt="icon" className="w-5 h-5" />
+                  {item.label && <span>{item.label}</span>}
                 </div>
               ))}
             </div>
             <div className="flex items-center gap-8">
               {propertyIcons.slice(3).map((item, index) => (
                 <div key={index} className="flex items-center gap-2">
-                  {item.icon} {item.label}
+                  <img src={item.icon} alt="icon" className="w-5 h-5" />
+                  {item.label && <span>{item.label}</span>}
                 </div>
               ))}
             </div>
@@ -170,7 +170,7 @@ export default function Description() {
               </span>
             </div>
           ))}
-          <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 mt-2 rounded text-sm font-semibold">
+          <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 mt-2 rounded text-sm font-semibold">
             Let's Comp It!
           </button>
         </aside>

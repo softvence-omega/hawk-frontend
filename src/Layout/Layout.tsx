@@ -10,7 +10,6 @@ const Layout: React.FC = () => {
       <main>
         <Outlet />
       </main>
-
       {location.pathname === "/" && <Footer />}
     </div>
   );
