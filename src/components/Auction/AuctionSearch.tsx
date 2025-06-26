@@ -44,10 +44,10 @@ export default function AuctionSearch() {
   };
 
   return (
-    <div className="bg-[#F0F4FFE5] w-full  h-[100px] mx-auto p-4">
-      <div className="bg-white rounded-full max-w-6xl mx-auto shadow-lg border border-gray-200 p-2 flex items-center gap-2">
+    <div className="bg-[#F0F4FFE5] w-full py-4 px-2 sm:px-4">
+      <div className="bg-white rounded-2xl max-w-6xl mx-auto shadow-lg border border-gray-200 px-4 py-3 flex flex-col gap-4 md:flex-row md:flex-wrap md:items-center md:gap-2 overflow-x-auto">
         {/* Search Input */}
-        <div className="flex-1 flex items-center gap-2 px-4">
+        <div className="flex-1 flex items-center gap-2 min-w-[200px]">
           <Search className="w-5 h-5 text-gray-400" />
           <Input
             type="text"
@@ -58,11 +58,10 @@ export default function AuctionSearch() {
           />
         </div>
 
-        {/* Divider */}
-        <div className="h-8 w-px bg-gray-200" />
+        <div className="hidden md:block h-8 w-px bg-gray-200" />
 
         {/* Auction Select */}
-        <div className="px-2">
+        <div className="min-w-[130px]">
           <Select defaultValue="auction">
             <SelectTrigger className="border-0 focus:ring-0 focus:ring-offset-0 text-sm font-medium">
               <SelectValue />
@@ -76,11 +75,8 @@ export default function AuctionSearch() {
           </Select>
         </div>
 
-        {/* Divider */}
-        <div className="h-8 w-px bg-gray-200" />
-
         {/* Location Select */}
-        <div className="px-2">
+        <div className="min-w-[150px]">
           <Select defaultValue="new-york">
             <SelectTrigger className="border-0 focus:ring-0 focus:ring-offset-0 text-sm font-medium">
               <div className="flex items-center gap-2">
@@ -103,11 +99,8 @@ export default function AuctionSearch() {
           </Select>
         </div>
 
-        {/* Divider */}
-        <div className="h-8 w-px bg-gray-200" />
-
         {/* Price Range Select */}
-        <div className="px-2">
+        <div className="min-w-[130px]">
           <Select defaultValue="all-range">
             <SelectTrigger className="border-0 focus:ring-0 focus:ring-offset-0 text-sm font-medium">
               <SelectValue />
@@ -125,11 +118,8 @@ export default function AuctionSearch() {
           </Select>
         </div>
 
-        {/* Divider */}
-        <div className="h-8 w-px bg-gray-200" />
-
-        {/* Amenities Popover */}
-        <div className="px-2">
+        {/* Amenities */}
+        <div className="min-w-[150px]">
           <Popover>
             <PopoverTrigger asChild>
               <Button
@@ -178,9 +168,11 @@ export default function AuctionSearch() {
         </div>
 
         {/* Search Button */}
-        <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-2 rounded-full">
-          Search
-        </Button>
+        <div className="min-w-[120px]">
+          <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full w-full md:w-auto">
+            Search
+          </Button>
+        </div>
       </div>
     </div>
   );

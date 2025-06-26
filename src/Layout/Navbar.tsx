@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 // import { useAppDispatch } from "@/hooks/useRedux";
 // import { logout } from "@/store/Slices/AuthSlice/authSlice";
 import logoImg from "@/assets/navbar/Union.png";
-import CommonWrapper from "@/common/CommonWrapper";
 
 const Navbar: React.FC = () => {
   const navigate = useNavigate();
@@ -26,12 +25,13 @@ const Navbar: React.FC = () => {
     { to: "/team", label: "Team" },
     { to: "/contact", label: "Contact" },
     { to: "/blog", label: "Blog" },
+    { to: "/auction", label: "Auction" },
   ];
 
   return (
     <nav className="bg-white/90 shadow-md sticky top-0 z-50">
      
-        <div className="flex items-center justify-between h-20 px-4 md:px-8">
+        <div className="flex items-center justify-between h-20 px-4 md:px-4 lg:8">
           {/* Logo */}
           <Link
             to="/"
@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
 
           {/* Right Buttons */}
           <div className="hidden md:flex gap-4">
-            <button className="border md:px-2 lg:px-6 py-2 rounded text-sm hover:bg-gray-100">
+            <button className="border md:px-2 lg:px-6 py-2 rounded text-sm hover:bg-gray-100" onClick={handleLogin}>
               Login/Register
             </button>
             <button className="md:px-2 lg:px-6 py-2 rounded text-sm bg-gradient-to-r from-[#2F6DFD] to-[#0041D9] text-white">
@@ -108,7 +108,7 @@ const Navbar: React.FC = () => {
                 </Link>
               ))}
               <div className="flex flex-col gap-2 mt-3">
-                <button className="border px-4 py-2 rounded text-sm">
+                <button className="border px-4 py-2 rounded text-sm" onClick={handleLogin}>
                   Login/Register
                 </button>
                 <button className="px-4 py-2 rounded text-sm bg-gradient-to-r from-[#2F6DFD] to-[#0041D9] text-white">

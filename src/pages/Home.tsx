@@ -67,6 +67,18 @@ const Home = () => {
       arv: 575000,
       offer: 431250,
     },
+    {
+      id: 6,
+      name: "Hilltop",
+      area: 2200,
+      beds: 4,
+      baths: 3,
+      timer: "00 : 00 : 45 : 18",
+      asIsPrice: 410000,
+      rehabEstimate: 90000,
+      arv: 575000,
+      offer: 431250,
+    },
   ];
 
   return (
@@ -82,18 +94,26 @@ const Home = () => {
         <source src={banner} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+      <AuctionSearch />
 
       {/* Card Grid Section */}
-    
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-10">
+
+     
+      <CommonWrapper>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3  gap-3 lg:gap-6 py-10">
           {cardData.map((item, index) => (
             <HouseCard key={index} property={item} />
           ))}
         </div>
-     
+      </CommonWrapper>
+    
+
 
       {/* Reviews */}
       <ReviewSection />
+     <CommonWrapper>
+       <PerfectHome></PerfectHome>
+     </CommonWrapper>
     </div>
   );
 };
