@@ -61,13 +61,13 @@ export default function Description() {
         <div>
           <h2 className="text-xl font-semibold mb-2">Map</h2>
           <div className="w-full h-[250px]">
-            <iframe
+            {/* <iframe
               src="https://maps.google.com/maps?q=Little%20Sioux,%20Iowa&t=&z=13&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               className="rounded-lg"
-              loading="lazy"
-            ></iframe>
+              // loading="lazy"
+            ></iframe> */}
           </div>
         </div>
 
@@ -157,13 +157,13 @@ export default function Description() {
           <div className="pt-4">
             <h2 className="text-xl font-semibold mb-2">Map</h2>
             <div className="w-full h-[500px]">
-              <iframe
+              {/* <iframe
                 src="https://maps.google.com/maps?q=Little%20Sioux,%20Iowa&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 className="rounded-lg"
-                loading="lazy"
-              ></iframe>
+                // loading="lazy"
+              ></iframe> */}
             </div>
           </div>
           <Features />
