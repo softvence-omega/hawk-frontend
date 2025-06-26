@@ -9,6 +9,24 @@ import {
 } from "react-icons/fa";
 import Features from "./Features";
 
+const propertyIcons = [
+  { icon: <FaHome />, label: "1200 sqft" },
+  { icon: <FaBed />, label: "4" },
+  { icon: <FaBath />, label: "3" },
+  { icon: <FaCar />, label: "" },
+  { icon: <FaWifi />, label: "" },
+  { icon: <FaBolt />, label: "" },
+  { icon: <FaFire />, label: "" },
+];
+
+const analyzerStats = [
+  { label: "As-is:", value: "$205,000" },
+  { label: "Rehab Est:", value: "$40,000" },
+  { label: "ARV:", value: "$300,000" },
+  { label: "75% Offer:", value: "$225,000", className: "text-blue-600" },
+  { label: "30-90 Day Resale:", value: "$250,000" },
+];
+
 export default function Description() {
   return (
     <div className="w-full px-4 sm:px-6 lg:px-8 pt-6">
@@ -16,36 +34,20 @@ export default function Description() {
         2861 62nd Ave, Oakland, CA
       </h2>
 
-      {/* Mobile Layout (stacked) */}
+      {/* Mobile Layout */}
       <div className="block lg:hidden space-y-6 pt-8">
-        {/* Top Icons - Mobile optimized */}
+        {/* Icons */}
         <div className="flex flex-wrap justify-between gap-4 text-gray-700 text-sm border-b border-[#D1D1D5] pb-6">
-          <div className="flex items-center gap-2">
-            <FaHome /> 1200 sqft
-          </div>
-          <div className="flex items-center gap-2">
-            <FaBed /> 4
-          </div>
-          <div className="flex items-center gap-2">
-            <FaBath /> 3
-          </div>
-          <div className="flex items-center gap-2">
-            <FaCar />
-          </div>
-          <div className="flex items-center gap-2">
-            <FaWifi />
-          </div>
-          <div className="flex items-center gap-2">
-            <FaBolt />
-          </div>
-          <div className="flex items-center gap-2">
-            <FaFire />
-          </div>
+          {propertyIcons.map((item, index) => (
+            <div key={index} className="flex items-center gap-2">
+              {item.icon} {item.label}
+            </div>
+          ))}
         </div>
 
         {/* Description */}
-        <div className="border-b border-[#D1D1D5] pb-6">
-          <h2 className="text-xl font-semibold mb-2">Description</h2>
+        <section className="border-b border-[#D1D1D5] pb-6">
+          <h3 className="text-xl font-semibold mb-2">Description</h3>
           <p className="text-sm text-gray-700 leading-relaxed">
             Great home ready to move into with 3 garages! 1 - 2 car attached, 1
             detached with plenty of room for the toys, cars, and hobby space.
@@ -55,93 +57,73 @@ export default function Description() {
             a large living room area, a bathroom, laundry room, and an area that
             would fit all the coats.
           </p>
-        </div>
+        </section>
 
-        {/* Map - Mobile optimized */}
-        <div>
-          <h2 className="text-xl font-semibold mb-2">Map</h2>
+        {/* Map */}
+        <section>
+          <h3 className="text-xl font-semibold mb-2">Map</h3>
           <div className="w-full h-[250px]">
-            {/* <iframe
+            <iframe
               src="https://maps.google.com/maps?q=Little%20Sioux,%20Iowa&t=&z=13&ie=UTF8&iwloc=&output=embed"
-              width="100%"
-              height="100%"
-              className="rounded-lg"
-              // loading="lazy"
-            ></iframe> */}
+              className="rounded-lg w-full h-full"
+              loading="lazy"
+              title="Map"
+            ></iframe>
           </div>
-        </div>
+        </section>
 
-        {/* Right Sidebar - Moved to appear before Features on mobile */}
-        <div className="bg-white rounded-lg border border-[#D1D1D5] p-4 space-y-4">
-          <h3 className="text-lg font-bold flex items-center gap-2 text-gray-700">
+        {/* AI Analyzer */}
+        <section className="bg-white rounded-lg border border-[#D1D1D5] p-4 space-y-4">
+          <h3 className="text-lg font-bold text-gray-700">
             LIVE AUCTION AI ANALYZER
           </h3>
-          <div className="flex justify-between text-sm border-b border-[#D1D1D5] pb-2">
-            <span className="text-gray-500">As-is:</span>
-            <span className="font-semibold text-gray-800">$205,000</span>
-          </div>
-          <div className="flex justify-between text-sm border-b border-[#D1D1D5] pb-2">
-            <span className="text-gray-500">Rehab Est:</span>
-            <span className="font-semibold text-gray-800">$40,000</span>
-          </div>
-          <div className="flex justify-between text-sm border-b border-[#D1D1D5] pb-2">
-            <span className="text-gray-500">ARV:</span>
-            <span className="font-semibold text-gray-800">$300,000</span>
-          </div>
-          <div className="flex justify-between text-sm border-b border-[#D1D1D5] pb-2">
-            <span className="text-gray-500">75% Offer:</span>
-            <span className="font-semibold text-blue-600">$225,000</span>
-          </div>
-          <div className="flex justify-between text-sm border-b border-[#D1D1D5] pb-2">
-            <span className="text-gray-500">30-90 Day Resale:</span>
-            <span className="font-semibold text-gray-800">$250,000</span>
-          </div>
-
+          {analyzerStats.map(({ label, value, className }, idx) => (
+            <div
+              key={idx}
+              className="flex justify-between text-sm border-b border-[#D1D1D5] pb-2"
+            >
+              <span className="text-gray-500">{label}</span>
+              <span
+                className={`font-semibold text-gray-800 ${className || ""}`}
+              >
+                {value}
+              </span>
+            </div>
+          ))}
           <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 mt-2 rounded text-sm font-semibold">
             Let's Comp It!
           </button>
-        </div>
+        </section>
 
-        {/* Features - Appears last on mobile */}
+        {/* Features */}
         <Features />
       </div>
 
-      {/* Desktop Layout (hidden on mobile) */}
+      {/* Desktop Layout */}
       <div className="hidden lg:grid lg:grid-cols-3 gap-6 pt-8">
         {/* Left Section */}
         <div className="lg:col-span-2 space-y-6">
-          {/* Top Icons */}
-          <div className="flex items-center justify-between gap-6 text-gray-700 text-sm border-b border-[#D1D1D5] pb-6">
-            <div className="flex items-center justify-evenly gap-8">
-              <div className="flex items-center gap-2">
-                <FaHome /> 1200 sqft
-              </div>
-              <div className="flex items-center gap-2">
-                <FaBed /> 4
-              </div>
-              <div className="flex items-center gap-2">
-                <FaBath /> 3
-              </div>
+          {/* Icons */}
+          <div className="flex items-center justify-between text-gray-700 text-sm border-b border-[#D1D1D5] pb-6">
+            <div className="flex items-center gap-8">
+              {propertyIcons.slice(0, 3).map((item, index) => (
+                <div key={index} className="flex items-center gap-2">
+                  {item.icon} {item.label}
+                </div>
+              ))}
             </div>
-            <div className="flex items-center justify-evenly gap-8">
-              <div className="flex items-center gap-2">
-                <FaCar />
-              </div>
-              <div className="flex items-center gap-2">
-                <FaWifi />
-              </div>
-              <div className="flex items-center gap-2">
-                <FaBolt />
-              </div>
-              <div className="flex items-center gap-2">
-                <FaFire />
-              </div>
+            <div className="flex items-center gap-8">
+              {propertyIcons.slice(3).map((item, index) => (
+                <div key={index} className="flex items-center gap-2">
+                  {item.icon} {item.label}
+                </div>
+              ))}
             </div>
           </div>
 
           {/* Description */}
-          <div className="pt-2 border-b border-[#D1D1D5] pb-9">
-            <h2 className="text-xl font-semibold mb-2">Description</h2>
+          <section className="border-b border-[#D1D1D5] pb-9 pt-2">
+            <h3 className="text-xl font-semibold mb-2">Description</h3>
             <p className="text-sm text-gray-700 leading-relaxed">
               Great home ready to move into with 3 garages! 1 - 2 car attached,
               1 detached with plenty of room for the toys, cars, and hobby
@@ -151,54 +133,47 @@ export default function Description() {
               finished with a large living room area, a bathroom, laundry room,
               and an area that would fit all the coats.
             </p>
-          </div>
+          </section>
 
           {/* Map */}
-          <div className="pt-4">
-            <h2 className="text-xl font-semibold mb-2">Map</h2>
+          <section className="pt-4">
+            <h3 className="text-xl font-semibold mb-2">Map</h3>
             <div className="w-full h-[500px]">
-              {/* <iframe
+              <iframe
                 src="https://maps.google.com/maps?q=Little%20Sioux,%20Iowa&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="100%"
-                className="rounded-lg"
-                // loading="lazy"
-              ></iframe> */}
+                className="rounded-lg w-full h-full"
+                loading="lazy"
+                title="Map"
+              ></iframe>
             </div>
-          </div>
+          </section>
+
+          {/* Features */}
           <Features />
         </div>
 
         {/* Right Sidebar */}
-        <div className="bg-white rounded-lg border border-[#D1D1D5] p-6 space-y-4 h-fit">
-          <h3 className="text-xl font-bold flex items-center gap-2 text-gray-700">
+        <aside className="bg-white rounded-lg border border-[#D1D1D5] p-6 space-y-4 h-fit">
+          <h3 className="text-xl font-bold text-gray-700">
             LIVE AUCTION AI ANALYZER
           </h3>
-          <div className="flex justify-between text-sm border-b border-[#D1D1D5] pb-2">
-            <span className="text-gray-500">As-is:</span>
-            <span className="font-semibold text-gray-800">$205,000</span>
-          </div>
-          <div className="flex justify-between text-sm border-b border-[#D1D1D5] pb-2">
-            <span className="text-gray-500">Rehab Est:</span>
-            <span className="font-semibold text-gray-800">$40,000</span>
-          </div>
-          <div className="flex justify-between text-sm border-b border-[#D1D1D5] pb-2">
-            <span className="text-gray-500">ARV:</span>
-            <span className="font-semibold text-gray-800">$300,000</span>
-          </div>
-          <div className="flex justify-between text-sm border-b border-[#D1D1D5] pb-2">
-            <span className="text-gray-500">75% Offer:</span>
-            <span className="font-semibold text-blue-600">$225,000</span>
-          </div>
-          <div className="flex justify-between text-sm border-b border-[#D1D1D5] pb-2">
-            <span className="text-gray-500">30-90 Day Resale:</span>
-            <span className="font-semibold text-gray-800">$250,000</span>
-          </div>
-
+          {analyzerStats.map(({ label, value, className }, idx) => (
+            <div
+              key={idx}
+              className="flex justify-between text-sm border-b border-[#D1D1D5] pb-2"
+            >
+              <span className="text-gray-500">{label}</span>
+              <span
+                className={`font-semibold text-gray-800 ${className || ""}`}
+              >
+                {value}
+              </span>
+            </div>
+          ))}
           <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 mt-2 rounded text-sm font-semibold">
             Let's Comp It!
           </button>
-        </div>
+        </aside>
       </div>
     </div>
   );

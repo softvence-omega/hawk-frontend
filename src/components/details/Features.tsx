@@ -1,203 +1,217 @@
-import {
-  FaBath,
-  FaBed,
-  FaBolt,
-  FaCar,
-  FaFire,
-  FaHome,
-  FaWifi,
-} from "react-icons/fa";
-import Features from "./Features";
-
-export default function Description() {
+export default function Features() {
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-8 pt-6">
-      <h2 className="font-semibold text-xl lg:text-3xl">
-        2861 62nd Ave, Oakland, CA
-      </h2>
-      
-      {/* Mobile Layout (stacked) */}
-      <div className="block lg:hidden space-y-6 pt-8">
-        {/* Top Icons - Mobile optimized */}
-        <div className="flex flex-wrap justify-between gap-4 text-gray-700 text-sm border-b border-[#D1D1D5] pb-6">
-          <div className="flex items-center gap-2">
-            <FaHome /> 1200 sqft
-          </div>
-          <div className="flex items-center gap-2">
-            <FaBed /> 4
-          </div>
-          <div className="flex items-center gap-2">
-            <FaBath /> 3
-          </div>
-          <div className="flex items-center gap-2">
-            <FaCar />
-          </div>
-          <div className="flex items-center gap-2">
-            <FaWifi />
-          </div>
-          <div className="flex items-center gap-2">
-            <FaBolt />
-          </div>
-          <div className="flex items-center gap-2">
-            <FaFire />
-          </div>
-        </div>
-
-        {/* Description */}
-        <div className="border-b border-[#D1D1D5] pb-6">
-          <h2 className="text-xl font-semibold mb-2">Description</h2>
-          <p className="text-sm text-gray-700 leading-relaxed">
-            Great home ready to move into with 3 garages! 1 - 2 car attached,
-            1 detached with plenty of room for the toys, cars, and hobby
-            space. This home is all finished with 3 bedrooms and 1 bath on the
-            main, an eat-in area off the kitchen and formal dining area, large
-            living room with a fireplace and bookshelves. The basement is
-            finished with a large living room area, a bathroom, laundry room,
-            and an area that would fit all the coats.
-          </p>
-        </div>
-
-        {/* Map - Mobile optimized */}
+    <div className="w-full py-10">
+      <h2 className="lg:text-2xl text-xl font-bold mb-8">Facts & features</h2>
+      <div className="space-y-8">
+        {/* Interior */}
         <div>
-          <h2 className="text-xl font-semibold mb-2">Map</h2>
-          <div className="w-full h-[250px]">
-            <iframe
-              src="https://maps.google.com/maps?q=Little%20Sioux,%20Iowa&t=&z=13&ie=UTF8&iwloc=&output=embed"
-              width="100%"
-              height="100%"
-              className="rounded-lg"
-              loading="lazy"
-            ></iframe>
+          <h2 className="py-2 w-full text-xl bg-[#F6F6FA] px-4">Interior</h2>
+          <div className="px-4 grid grid-cols-1 md:grid-cols-2 gap-10 mt-4">
+            {/* Bedrooms & Bathrooms */}
+            <div>
+              <h4 className="font-bold mb-2">Bedrooms & bathrooms</h4>
+              <ul className="space-y-1 list-disc pl-5">
+                <li>Bedrooms: 3</li>
+                <li>Bathrooms: 2</li>
+              </ul>
+            </div>
+
+            {/* Heating */}
+            <div>
+              <h4 className="font-bold mb-2">Heating</h4>
+              <ul className="space-y-1 list-disc pl-5">
+                <li>Natural Gas, Propane</li>
+              </ul>
+            </div>
+
+            {/* Rooms */}
+            <div>
+              <h4 className="font-bold mb-2">Rooms</h4>
+              <ul className="space-y-1 list-disc pl-5">
+                <li>Room types: Bathroom, Family Room, Baths,<br></br> Other Bedrooms, Kitchen, Dining</li>
+              </ul>
+            </div>
+
+            {/* Cooling */}
+            <div>
+              <h4 className="font-bold mb-2">Cooling</h4>
+              <ul className="space-y-1 list-disc pl-5">
+                <li>Electric</li>
+              </ul>
+            </div>
+
+            {/* Dining Room */}
+            <div>
+              <h4 className="font-bold mb-2">Dining room</h4>
+              <ul className="space-y-1 list-disc pl-5">
+                <li>Features: Eat-in Kitchen, Formal Dining</li>
+                <li>Level: Main</li>
+              </ul>
+            </div>
+
+            {/* Appliances */}
+            <div>
+              <h4 className="font-bold mb-2">Appliances</h4>
+              <ul className="space-y-1 list-disc pl-5">
+                <li>Included: Dishwasher, Electric Water Heater</li>
+                <li>Included: Microwave, Refrigerator</li>
+              </ul>
+            </div>
+
+            {/* Family Room */}
+            <div>
+              <h4 className="font-bold mb-2">Family room</h4>
+              <ul className="space-y-1 list-disc pl-5">
+                <li>Level: Main</li>
+              </ul>
+            </div>
+
+            {/* Features */}
+            <div>
+              <h4 className="font-bold mb-2">Features</h4>
+              <ul className="space-y-1 list-disc pl-5">
+                <li>Other</li>
+                <li>Basement: Partial, Finished Bath, Living Room</li>
+                <li>Has fireplace: Yes</li>
+                <li>Fireplace features: Main Floor</li>
+              </ul>
+            </div>
+
+            {/* Living Room */}
+            <div>
+              <h4 className="font-bold mb-2">Living room</h4>
+              <ul className="space-y-1 list-disc pl-5">
+                <li>Level: Basement</li>
+              </ul>
+            </div>
+
+            {/* Interior Area */}
+            <div>
+              <h4 className="font-bold mb-2">Interior area</h4>
+              <ul className="space-y-1 list-disc pl-5">
+                <li>Total structure area: 2,200 sqft</li>
+                <li>Total interior livable area: 2,200 sqft</li>
+                <li>Finished area above ground: 1,425 sqft</li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        {/* Right Sidebar - Moved to appear before Features on mobile */}
-        <div className="bg-white rounded-lg border border-[#D1D1D5] p-4 space-y-4">
-          <h3 className="text-lg font-bold flex items-center gap-2 text-gray-700">
-            LIVE AUCTION AI ANALYZER
-          </h3>
-          <div className="flex justify-between text-sm border-b border-[#D1D1D5] pb-2">
-            <span className="text-gray-500">As-is:</span>
-            <span className="font-semibold text-gray-800">$205,000</span>
+        {/* Property */}
+        <div>
+          <h2 className="py-2 w-full text-xl bg-[#F6F6FA] px-4">Property</h2>
+          <div className="px-4 grid grid-cols-1 md:grid-cols-2 gap-10 mt-4">
+            <div>
+              <h4 className="font-bold mb-2">Parking</h4>
+              <ul className="space-y-1 list-disc pl-5">
+                <li>Total spaces: 6</li>
+                <li>Parking features: Attached & Detached, Off Street, Electric, Storage</li>
+                <li>Attached garage spaces: 6</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold mb-2">Lot</h4>
+              <ul className="space-y-1 list-disc pl-5">
+                <li>Dimensions: 120 x 120 / 14400 sqft</li>
+                <li>Features: Corner Lot, Over 1/4 up to 1/2 Acre</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold mb-2">Features</h4>
+              <ul className="space-y-1 list-disc pl-5">
+                <li>Levels: Split Entry</li>
+                <li>Stories: 1</li>
+                <li>Patio & porch: Enclosed, Three Season Room</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold mb-2">Details</h4>
+              <ul className="space-y-1 list-disc pl-5">
+                <li>Additional structures: Garage(s)</li>
+                <li>Parcel number: 540002202100000</li>
+                <li>Special conditions: Real Estate Owned</li>
+              </ul>
+            </div>
           </div>
-          <div className="flex justify-between text-sm border-b border-[#D1D1D5] pb-2">
-            <span className="text-gray-500">Rehab Est:</span>
-            <span className="font-semibold text-gray-800">$40,000</span>
-          </div>
-          <div className="flex justify-between text-sm border-b border-[#D1D1D5] pb-2">
-            <span className="text-gray-500">ARV:</span>
-            <span className="font-semibold text-gray-800">$300,000</span>
-          </div>
-          <div className="flex justify-between text-sm border-b border-[#D1D1D5] pb-2">
-            <span className="text-gray-500">75% Offer:</span>
-            <span className="font-semibold text-blue-600">$225,000</span>
-          </div>
-          <div className="flex justify-between text-sm border-b border-[#D1D1D5] pb-2">
-            <span className="text-gray-500">30-90 Day Resale:</span>
-            <span className="font-semibold text-gray-800">$250,000</span>
-          </div>
-
-          <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 mt-2 rounded text-sm font-semibold">
-            Let's Comp It!
-          </button>
         </div>
 
-        {/* Features - Appears last on mobile */}
-        <Features />
-      </div>
-
-      {/* Desktop Layout (hidden on mobile) */}
-      <div className="hidden lg:grid lg:grid-cols-3 gap-6 pt-8">
-        {/* Left Section */}
-        <div className="lg:col-span-2 space-y-6">
-          {/* Top Icons */}
-          <div className="flex items-center justify-between gap-6 text-gray-700 text-sm border-b border-[#D1D1D5] pb-6">
-            <div className="flex items-center justify-evenly gap-8">
-              <div className="flex items-center gap-2">
-                <FaHome /> 1200 sqft
-              </div>
-              <div className="flex items-center gap-2">
-                <FaBed /> 4
-              </div>
-              <div className="flex items-center gap-2">
-                <FaBath /> 3
-              </div>
+        {/* Construction */}
+        <div>
+          <h2 className="py-2 w-full text-xl bg-[#F6F6FA] px-4">Construction</h2>
+          <div className="px-4 grid grid-cols-1 md:grid-cols-2 gap-10 mt-4">
+            <div>
+              <h4 className="font-bold mb-2">Type & style</h4>
+              <ul className="space-y-1 list-disc pl-5">
+                <li>Home type: SingleFamily</li>
+                <li>Property subtype: Single Family Residence</li>
+              </ul>
             </div>
-            <div className="flex items-center justify-evenly gap-8">
-              <div className="flex items-center gap-2">
-                <FaCar />
-              </div>
-              <div className="flex items-center gap-2">
-                <FaWifi />
-              </div>
-              <div className="flex items-center gap-2">
-                <FaBolt />
-              </div>
-              <div className="flex items-center gap-2">
-                <FaFire />
-              </div>
+            <div>
+              <h4 className="font-bold mb-2">Condition</h4>
+              <ul className="space-y-1 list-disc pl-5">
+                <li>New construction: No</li>
+                <li>Year built: 1990</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold mb-2">Materials</h4>
+              <ul className="space-y-1 list-disc pl-5">
+                <li>Frame</li>
+                <li>Roof: Composition</li>
+              </ul>
             </div>
           </div>
-
-          {/* Description */}
-          <div className="pt-2 border-b border-[#D1D1D5] pb-9">
-            <h2 className="text-xl font-semibold mb-2">Description</h2>
-            <p className="text-sm text-gray-700 leading-relaxed">
-              Great home ready to move into with 3 garages! 1 - 2 car attached,
-              1 detached with plenty of room for the toys, cars, and hobby
-              space. This home is all finished with 3 bedrooms and 1 bath on the
-              main, an eat-in area off the kitchen and formal dining area, large
-              living room with a fireplace and bookshelves. The basement is
-              finished with a large living room area, a bathroom, laundry room,
-              and an area that would fit all the coats.
-            </p>
-          </div>
-
-          {/* Map */}
-          <div className="pt-4">
-            <h2 className="text-xl font-semibold mb-2">Map</h2>
-            <div className="w-full h-[500px]">
-              <iframe
-                src="https://maps.google.com/maps?q=Little%20Sioux,%20Iowa&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="100%"
-                className="rounded-lg"
-                loading="lazy"
-              ></iframe>
-            </div>
-          </div>
-          <Features />
         </div>
 
-        {/* Right Sidebar */}
-        <div className="bg-white rounded-lg border border-[#D1D1D5] p-6 space-y-4 h-fit">
-          <h3 className="text-xl font-bold flex items-center gap-2 text-gray-700">
-            LIVE AUCTION AI ANALYZER
-          </h3>
-          <div className="flex justify-between text-sm border-b border-[#D1D1D5] pb-2">
-            <span className="text-gray-500">As-is:</span>
-            <span className="font-semibold text-gray-800">$205,000</span>
+        {/* Utilities */}
+        <div>
+          <h2 className="py-2 w-full text-xl bg-[#F6F6FA] px-4">Utilities & green energy</h2>
+          <div className="px-4 grid grid-cols-1 md:grid-cols-2 gap-10 mt-4">
+            <div>
+              <h4 className="font-bold mb-2">Utilities</h4>
+              <ul className="space-y-1 list-disc pl-5">
+                <li>Sewer: Public Sewer</li>
+                <li>Water: Public</li>
+                <li>Utilities for property: Propane Tank Rental</li>
+              </ul>
+            </div>
           </div>
-          <div className="flex justify-between text-sm border-b border-[#D1D1D5] pb-2">
-            <span className="text-gray-500">Rehab Est:</span>
-            <span className="font-semibold text-gray-800">$40,000</span>
-          </div>
-          <div className="flex justify-between text-sm border-b border-[#D1D1D5] pb-2">
-            <span className="text-gray-500">ARV:</span>
-            <span className="font-semibold text-gray-800">$300,000</span>
-          </div>
-          <div className="flex justify-between text-sm border-b border-[#D1D1D5] pb-2">
-            <span className="text-gray-500">75% Offer:</span>
-            <span className="font-semibold text-blue-600">$225,000</span>
-          </div>
-          <div className="flex justify-between text-sm border-b border-[#D1D1D5] pb-2">
-            <span className="text-gray-500">30-90 Day Resale:</span>
-            <span className="font-semibold text-gray-800">$250,000</span>
-          </div>
+        </div>
 
-          <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 mt-2 rounded text-sm font-semibold">
-            Let's Comp It!
-          </button>
+        {/* Community */}
+        <div>
+          <h2 className="py-2 w-full text-xl bg-[#F6F6FA] px-4">Community & HOA</h2>
+          <div className="px-4 grid grid-cols-1 md:grid-cols-2 gap-10 mt-4">
+            <div>
+              <h4 className="font-bold mb-2">Location</h4>
+              <ul className="space-y-1 list-disc pl-5">
+                <li>Region: Little Sioux</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Financial */}
+        <div>
+          <h2 className="py-2 w-full text-xl bg-[#F6F6FA] px-4">Financial & listing details</h2>
+          <div className="px-4 grid grid-cols-1 md:grid-cols-2 gap-10 mt-4">
+            <div>
+              <h4 className="font-bold mb-2">Financials</h4>
+              <ul className="space-y-1 list-disc pl-5">
+                <li>Price per square foot: $98/sqft</li>
+                <li>Tax assessed value: $199,420</li>
+                <li>Annual tax amount: $3,168</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold mb-2">Listing</h4>
+              <ul className="space-y-1 list-disc pl-5">
+                <li>Date on market: 3/16/2025</li>
+                <li>Listing terms: 1031 Exchange,Conventional</li>
+                <li>Electric utility on property: Yes</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>

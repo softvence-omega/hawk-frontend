@@ -4,8 +4,8 @@ import HomeDetailsComponent from "@/components/details/HomeDetailsComponent";
 const HomeDetails = () => {
   return (
     <div>
-      {/* <HomeDetailsComponent /> */}
-      {/* <Description/> */}
+      <HomeDetailsComponent />
+      <Description />
     </div>
   );
 };
