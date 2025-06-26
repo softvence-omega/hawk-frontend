@@ -31,7 +31,7 @@ export default function Description() {
   return (
     <div className="w-full px-4 sm:px-6 lg:px-8 pt-6">
       <h2 className="font-semibold text-xl lg:text-3xl">
-        2861 62nd Ave, Oakland, CA
+        2861 62nd Avenue, Oakland, CA
       </h2>
 
       {/* Mobile Layout */}
