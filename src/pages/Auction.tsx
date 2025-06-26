@@ -5,18 +5,21 @@ import { FaArrowCircleDown } from "react-icons/fa";
 import footerImage from "@/assets/footer-image/footer-art.svg.png";
 import logo from "@/assets/navbar/Union.png";
 import footerIcon1 from "@/assets/footer-icons/SocialIcons1.svg";
-import footerIcon2 from "@/assets/footer-icons//SocialIcons2.svg";
+import footerIcon2 from "@/assets/footer-icons/SocialIcons2.svg";
 import footerIcon3 from "@/assets/footer-icons/SocialIcons3.svg";
 import footerIcon4 from "@/assets/footer-icons/SocialIcons4.svg";
 
 const Auction = () => {
   return (
-    <div>
+    <div className="px-4 sm:px-6 lg:px-8">
+      {/* Top search */}
       <AuctionSearch />
-      <div className="flex mx-3 gap-2">
-        {/* iframe  */}
-        <div className="w-1/2">
-          <div className="h-[500px]">
+
+      {/* Main layout */}
+      <div className="flex flex-col md:flex-row gap-6 mt-4">
+        {/* Left side: Map & Sold Comps */}
+        <div className="w-full md:w-1/2 space-y-4">
+          <div className="h-[300px] md:h-[500px] w-full">
             <iframe
               width="100%"
               height="100%"
@@ -24,54 +27,60 @@ const Auction = () => {
               scrolling="no"
               marginHeight={0}
               marginWidth={0}
+              className="rounded-md"
               src="https://maps.google.com/maps?q=2861%2062nd%20Ave,%20Oakland,%20CA&t=&z=14&ie=UTF8&iwloc=&output=embed"
             ></iframe>
           </div>
-          {/* sold comps  */}
-          <div>
-            <div className="bg-[#FDEEEE] py-4 px-2 border border-[#B91C1C] rounded-md mt-3">
-              <p className="text-[#B91C1C] font-bold">SOLD COMPS</p>
-            </div>
-            <SoldComps />
+
+          {/* Sold Comps */}
+          <div className="bg-[#FDEEEE] py-3 px-4 border border-[#B91C1C] rounded-md">
+            <p className="text-[#B91C1C] font-bold">SOLD COMPS</p>
           </div>
+          <SoldComps />
         </div>
-        {/* cards  */}
-        <div className="w-1/2">
-          <div className="px-4 py-5">
-            <h1 className="font-bricolage text-2xl font-semibold">
+
+        {/* Right side: Active Cards */}
+        <div className="w-full md:w-1/2 space-y-4">
+          <div>
+            <h1 className="font-bricolage text-xl sm:text-2xl font-semibold">
               Quebec Real Estate & Homes For Sale
             </h1>
-            <div className="flex justify-between items-center mt-2">
-              <p className="text-gray-400">5 results</p>
-              <p className="text-blue-400 flex items-center gap-3">
+
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mt-3 gap-2 sm:gap-0">
+              <p className="text-gray-400 text-sm">5 results</p>
+              <p className="text-blue-400 flex items-center gap-2 text-sm">
                 Sort: Home for you <FaArrowCircleDown />
               </p>
             </div>
-            <div className="bg-[#16A34A14] py-4 px-2 border border-[#15803D] rounded-md mt-3">
+
+            <div className="bg-[#16A34A14] py-3 px-4 border border-[#15803D] rounded-md mt-3">
               <p className="text-[#15803D] font-bold">ACTIVE</p>
             </div>
           </div>
-          {/* cards div  */}
-          <div>
-            <ActiveComps />
-          </div>
+
+          <ActiveComps />
         </div>
       </div>
 
-      <div className="mt-96">
-        <div className="mb-24 flex justify-center items-center gap-4">
-          <img src={logo} alt="" />
-          <span className="text-xl font-semibold">AZ Deal Hub</span>
-          <div className="text-sm text-gray-500 flex items-center gap-2">
-            <h1>Follow us on:</h1>
-            <img src={footerIcon1} alt="" />
-            <img src={footerIcon2} alt="" />
-            <img src={footerIcon3} alt="" />
-            <img src={footerIcon4} alt="" />
-            <p>© 2006-2025 AZ Deal Hub</p>
+      {/* Footer */}
+      <div className="mt-20 sm:mt-32">
+        <div className="mb-12 sm:mb-24 flex flex-col items-center gap-4 sm:flex-row sm:justify-between sm:items-center">
+          <div className="flex items-center gap-3">
+            <img src={logo} alt="Logo" className="w-8 h-8" />
+            <span className="text-lg font-semibold">AZ Deal Hub</span>
+          </div>
+
+          <div className="text-sm text-gray-500 flex flex-wrap justify-center items-center gap-3 sm:gap-4">
+            <span>Follow us on:</span>
+            <img src={footerIcon1} alt="Social1" />
+            <img src={footerIcon2} alt="Social2" />
+            <img src={footerIcon3} alt="Social3" />
+            <img src={footerIcon4} alt="Social4" />
+            <p className="mt-2 sm:mt-0">© 2006-2025 AZ Deal Hub</p>
           </div>
         </div>
-        <img src={footerImage} alt="" className="w-full" />
+
+        <img src={footerImage} alt="Footer art" className="w-full object-cover" />
       </div>
     </div>
   );

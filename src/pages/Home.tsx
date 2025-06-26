@@ -1,6 +1,5 @@
 import HouseCard from "@/components/home/HouseCard";
 import banner from "../../public/banner img.png";
-import CommonWrapper from "@/common/CommonWrapper";
 import ReviewSection from "@/components/home/ReviewSection";
 
 const Home = () => {
