@@ -1,5 +1,5 @@
 import { soldCompsData } from "@/lib/data/cardData";
-import PropertyCard from "./Cards/SoldCompsCards";
+import SoldCompsCards from "./Cards/SoldCompsCards";
 
 const SoldComps = () => {
   return (
@@ -12,7 +12,7 @@ const SoldComps = () => {
         {/* Single card example */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {soldCompsData.map((property, idx) => (
-            <PropertyCard key={idx} {...property} />
+            <SoldCompsCards key={idx} {...property} />
           ))}
         </div>
       </div>

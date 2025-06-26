@@ -1,21 +1,22 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useAppDispatch } from "@/hooks/useRedux";
-import { logout } from "@/store/Slices/AuthSlice/authSlice";
+
+// import { useAppDispatch } from "@/hooks/useRedux";
+// import { logout } from "@/store/Slices/AuthSlice/authSlice";
 import logoImg from "@/assets/navbar/Union.png";
 import CommonWrapper from "@/common/CommonWrapper";
 
 const Navbar: React.FC = () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
-  const dispatch = useAppDispatch();
+
+  // const dispatch = useAppDispatch();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleLogout = () => {
-    dispatch(logout());
+  const handleLogin = () => {
     navigate("/login");
   };
 

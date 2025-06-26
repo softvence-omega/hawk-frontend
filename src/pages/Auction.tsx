@@ -2,12 +2,7 @@ import ActiveComps from "@/components/Auction/ActiveComps";
 import AuctionSearch from "@/components/Auction/AuctionSearch";
 import SoldComps from "@/components/Auction/SoldComps";
 import { FaArrowCircleDown } from "react-icons/fa";
-import footerImage from "@/assets/footer-image/footer-art.svg.png";
-import logo from "@/assets/navbar/Union.png";
-import footerIcon1 from "@/assets/footer-icons/SocialIcons1.svg";
-import footerIcon2 from "@/assets/footer-icons/SocialIcons2.svg";
-import footerIcon3 from "@/assets/footer-icons/SocialIcons3.svg";
-import footerIcon4 from "@/assets/footer-icons/SocialIcons4.svg";
+import LoginFooter from "@/Layout/LoginFooter";
 
 const Auction = () => {
   return (
@@ -62,26 +57,22 @@ const Auction = () => {
         </div>
       </div>
 
-      {/* Footer */}
-      <div className="mt-20 sm:mt-32">
-        <div className="mb-12 sm:mb-24 flex flex-col items-center gap-4 sm:flex-row sm:justify-between sm:items-center">
-          <div className="flex items-center gap-3">
-            <img src={logo} alt="Logo" className="w-8 h-8" />
-            <span className="text-lg font-semibold">AZ Deal Hub</span>
-          </div>
-
-          <div className="text-sm text-gray-500 flex flex-wrap justify-center items-center gap-3 sm:gap-4">
-            <span>Follow us on:</span>
-            <img src={footerIcon1} alt="Social1" />
-            <img src={footerIcon2} alt="Social2" />
-            <img src={footerIcon3} alt="Social3" />
-            <img src={footerIcon4} alt="Social4" />
-            <p className="mt-2 sm:mt-0">© 2006-2025 AZ Deal Hub</p>
+      {/* <div className="mt-96">
+        <div className="mb-24 flex justify-center items-center gap-4">
+          <img src={logo} alt="" />
+          <span className="text-xl font-semibold">AZ Deal Hub</span>
+          <div className="text-sm text-gray-500 flex items-center gap-2">
+            <h1>Follow us on:</h1>
+            <img src={footerIcon1} alt="" />
+            <img src={footerIcon2} alt="" />
+            <img src={footerIcon3} alt="" />
+            <img src={footerIcon4} alt="" />
+            <p>© 2006-2025 AZ Deal Hub</p>
           </div>
         </div>
-
-        <img src={footerImage} alt="Footer art" className="w-full object-cover" />
-      </div>
+        <img src={footerImage} alt="" className="w-full" />
+      </div> */}
+      <LoginFooter />
     </div>
   );
 };

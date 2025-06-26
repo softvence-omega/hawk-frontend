@@ -1,10 +1,14 @@
 import HouseCard from "@/components/home/HouseCard";
 import banner from "../../public/banner img.png";
+import CommonWrapper from "@/common/CommonWrapper";
 import ReviewSection from "@/components/home/ReviewSection";
+import AuctionSearch from "@/components/Auction/AuctionSearch";
+import PerfectHome from "@/components/home/PerfectHome";
 
 const Home = () => {
   const cardData = [
     {
+      id: 1,
       name: "2861 62nd Ave, Oakland, CA",
       area: 1200,
       beds: 4,
@@ -16,6 +20,7 @@ const Home = () => {
       offer: 225000,
     },
     {
+      id: 2,
       name: "2861 62nd Ave, Oakland, CA",
       area: 1500,
       beds: 3,
@@ -27,6 +32,7 @@ const Home = () => {
       offer: 281250,
     },
     {
+      id: 3,
       name: "2861 62nd Ave, Oakland, CA",
       area: 1800,
       beds: 5,
@@ -38,6 +44,7 @@ const Home = () => {
       offer: 337500,
     },
     {
+      id: 4,
       name: "2861 62nd Ave, Oakland, CA",
       area: 950,
       beds: 2,
@@ -49,6 +56,7 @@ const Home = () => {
       offer: 157500,
     },
     {
+      id: 5,
       name: "Hilltop",
       area: 2200,
       beds: 4,
