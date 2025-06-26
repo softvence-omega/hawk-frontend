@@ -5,7 +5,7 @@ const HomeDetails = () => {
   return (
     <div>
       <HomeDetailsComponent />
-      <Description/>
+      <Description />
     </div>
   );
 };
