@@ -67,12 +67,25 @@ const Home = () => {
       arv: 575000,
       offer: 431250,
     },
+    {
+      id: 6,
+      name: "Hilltop",
+      area: 2200,
+      beds: 4,
+      baths: 3,
+      timer: "00 : 00 : 45 : 18",
+      asIsPrice: 410000,
+      rehabEstimate: 90000,
+      arv: 575000,
+      offer: 431250,
+    },
   ];
 
   return (
     <div className="">
+      {/* Responsive video banner */}
       <video
-        className="h-[590px] w-full object-cover"
+        className="w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[590px] object-cover"
         autoPlay
         muted
         loop
@@ -81,17 +94,26 @@ const Home = () => {
         <source src={banner} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      {/* home section card  */}
       <AuctionSearch />
+
+      {/* Card Grid Section */}
+
+     
       <CommonWrapper>
-        <div className="grid grid-cols-3 ">
-          {cardData.map((item) => (
-            <HouseCard property={item}></HouseCard>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3  gap-3 lg:gap-6 py-10">
+          {cardData.map((item, index) => (
+            <HouseCard key={index} property={item} />
           ))}
         </div>
       </CommonWrapper>
-      <ReviewSection></ReviewSection>
-      <PerfectHome />
+    
+
+
+      {/* Reviews */}
+      <ReviewSection />
+     <CommonWrapper>
+       <PerfectHome></PerfectHome>
+     </CommonWrapper>
     </div>
   );
 };
