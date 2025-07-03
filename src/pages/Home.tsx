@@ -99,7 +99,7 @@ const Home = () => {
       {/* Card Grid Section */}
 
       <CommonWrapper>
-        <div className="grid lg:grid-cols-3 ">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 sm:p-6 md:p-8 lg:p-12">
           {cardData.map((item) => (
             <HouseCard property={item}></HouseCard>
           ))}

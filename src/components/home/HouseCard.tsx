@@ -31,7 +31,7 @@ const HouseCard = ({ property }: { property: Property }) => {
   };
 
   return (
-    <div className="max-w-md bg-white rounded-lg shadow-md overflow-hidden m-4 transition-all duration-300 hover:shadow-xl ">
+    <div className="w-full md:max-w-md bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl ">
       {/* Property Image */}
       <div className="w-full h-48 overflow-hidden ">
         <img
@@ -92,45 +92,49 @@ const HouseCard = ({ property }: { property: Property }) => {
         </button>
 
         {/* Price Grid */}
-        <div className="grid grid-cols-2 gap-3 mb-4">
-          <div className="flex gap-[46px] items-center border-b border-gray-300">
-            <p className="text-gray-600 text-sm">As-Is:</p>
-            <p className="font-bold text-sm">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+          <div className="flex justify-between sm:gap-2 md:gap-4 items-center border-b border-gray-300 pb-2">
+            <p className="text-gray-600 text-sm flex-shrink-0">As-Is:</p>
+            <p className="font-bold text-sm text-right">
               {formatCurrency(property.asIsPrice)}
             </p>
           </div>
-          <div className="flex gap-[46px] items-center border-b border-gray-300">
-            <p className="text-gray-600 text-sm">Rehab Est:</p>
-            <p className="font-bold text-sm">
+          <div className="flex justify-between sm:gap-2 md:gap-4 items-center border-b border-gray-300 pb-2">
+            <p className="text-gray-600 text-sm flex-shrink-0">Rehab Est:</p>
+            <p className="font-bold text-sm text-right">
               {formatCurrency(property.rehabEstimate)}
             </p>
           </div>
-          <div className="flex gap-[46px] items-center border-b border-gray-300">
-            <p className="text-gray-600 text-sm">ARV:</p>
-            <p className="font-bold text-sm ">{formatCurrency(property.arv)}</p>
+          <div className="flex justify-between sm:gap-2 md:gap-4 items-center border-b border-gray-300 pb-2">
+            <p className="text-gray-600 text-sm flex-shrink-0">ARV:</p>
+            <p className="font-bold text-sm text-right">
+              {formatCurrency(property.arv)}
+            </p>
           </div>
-          <div className="flex gap-[46px] items-center border-b border-gray-300">
-            <p className="text-gray-600 text-sm">75% Offer:</p>
-            <p className="font-bold text-sm text-blue-600">
+          <div className="flex justify-between sm:gap-2 md:gap-4 items-center border-b border-gray-300 pb-2">
+            <p className="text-gray-600 text-sm flex-shrink-0">75% Offer:</p>
+            <p className="font-bold text-sm text-blue-600 text-right">
               {formatCurrency(property.offer)}
             </p>
           </div>
         </div>
 
+        {/* Bud Amount Section */}
+
         <h1 className="pb-2">Bid Amount </h1>
-        <div>
-          <div className="flex gap-[16px] w-full">
+        <div className="flex flex-col gap-3">
+          <div className="flex gap-2 w-full">
             <input
-              className="px-3 flex-1 border border-gray-300 rounded"
+              className="px-2 py-2 flex-1 border border-gray-300 rounded text-xs sm:text-sm min-w-0"
               type="text"
-              placeholder="Enter your bid amount"
+              placeholder="Enter bid amount"
             />
-            <button className="flex-1 bg-linear-to-r from-[#FF8702] to-[#FD4303] px-[24px] py-[10px] rounded text-white">
+            <button className="flex-shrink-0 bg-gradient-to-r from-[#FF8702] to-[#FD4303] px-3 sm:px-4 py-2 rounded text-white text-xs sm:text-sm font-medium whitespace-nowrap">
               Place Bid
             </button>
           </div>
           <button
-            className="w-full px-[24px] py-[20px] border border-gray-600 rounded mt-2"
+            className="w-full px-4 py-3 border border-gray-600 font-bold rounded text-xs sm:text-sm hover:bg-gray-50 transition-colors"
             onClick={() => navigate(`/homeDetails/${property.id}`)}
           >
             View Details
