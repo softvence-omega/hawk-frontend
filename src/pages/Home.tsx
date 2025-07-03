@@ -98,28 +98,19 @@ const Home = () => {
 
       {/* Card Grid Section */}
 
-     
       <CommonWrapper>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3  gap-3 lg:gap-6 py-10">
-          {cardData.map((item, index) => (
-            <HouseCard key={index} property={item} />
-=======
         <div className="grid lg:grid-cols-3 ">
           {cardData.map((item) => (
             <HouseCard property={item}></HouseCard>
->>>>>>> feature/auction
           ))}
         </div>
       </CommonWrapper>
-    
-
 
       {/* Reviews */}
       <ReviewSection />
-     <CommonWrapper>
-       <PerfectHome></PerfectHome>
-     </CommonWrapper>
+      <CommonWrapper>
+        <PerfectHome></PerfectHome>
+      </CommonWrapper>
     </div>
   );
 };

@@ -53,27 +53,27 @@ export default function AuctionSearch() {
   };
 
   return (
-    <div className="bg-[#F0F4FFE5] w-full h-auto md:h-[100px] mx-auto p-4">
-      {/* Desktop Version */}
-      <div className=" block bg-white rounded-full lg:max-w-6xl mx-auto shadow-lg border border-gray-200 p-2 flex items-center gap-2">
+    <div className="bg-[#F0F4FFE5] w-full h-auto lg:h-[100px] mx-auto p-2 sm:p-4">
+      {/* Desktop and Tablet Version */}
+      <div className="hidden md:flex bg-white rounded-full max-w-7xl mx-auto shadow-lg border border-gray-200 p-2 items-center gap-1 lg:gap-2 overflow-hidden">
         {/* Search Input */}
-        <div className="flex-1 flex items-center lg:gap-2 lg:px-4">
-          <Search className="w-5 h-5 text-gray-400" />
+        <div className="flex-1 flex items-center gap-1 lg:gap-2 px-2 lg:px-4 min-w-0">
+          <Search className="w-4 h-4 lg:w-5 lg:h-5 text-gray-400 flex-shrink-0" />
           <Input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="border-0 focus-visible:ring-0 focus-visible:ring-offset-0 text-sm placeholder:text-gray-500"
+            className="border-0 focus-visible:ring-0 focus-visible:ring-offset-0 text-xs lg:text-sm placeholder:text-gray-500 min-w-0"
             placeholder="Search properties..."
           />
         </div>
 
-        <div className="hidden md:block h-8 w-px bg-gray-200" />
+        <div className="h-6 lg:h-8 w-px bg-gray-200 flex-shrink-0" />
 
         {/* Auction Select */}
-        <div className="lg:px-2">
+        <div className="flex-shrink-0">
           <Select defaultValue="auction">
-            <SelectTrigger className="border-0 focus:ring-0 focus:ring-offset-0 text-sm font-medium">
+            <SelectTrigger className="border-0 focus:ring-0 focus:ring-offset-0 text-xs lg:text-sm font-medium w-20 lg:w-auto px-1 lg:px-2">
               <SelectValue />
             </SelectTrigger>
             <SelectContent className="bg-white">
@@ -86,11 +86,11 @@ export default function AuctionSearch() {
         </div>
 
         {/* Location Select */}
-        <div className="lg:px-2">
+        <div className="flex-shrink-0">
           <Select defaultValue="new-york">
-            <SelectTrigger className="border-0 focus:ring-0 focus:ring-offset-0 text-sm font-medium">
-              <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-gray-500" />
+            <SelectTrigger className="border-0 focus:ring-0 focus:ring-offset-0 text-xs lg:text-sm font-medium w-24 lg:w-auto px-1 lg:px-2">
+              <div className="flex items-center gap-1">
+                <MapPin className="w-3 h-3 lg:w-4 lg:h-4 text-gray-500" />
                 <SelectValue />
               </div>
             </SelectTrigger>
@@ -110,9 +110,9 @@ export default function AuctionSearch() {
         </div>
 
         {/* Price Range Select */}
-        <div className="lg:px-2">
+        <div className="flex-shrink-0">
           <Select defaultValue="all-range">
-            <SelectTrigger className="border-0 focus:ring-0 focus:ring-offset-0 text-sm font-medium">
+            <SelectTrigger className="border-0 focus:ring-0 focus:ring-offset-0 text-xs lg:text-sm font-medium w-24 lg:w-auto px-1 lg:px-2">
               <SelectValue />
             </SelectTrigger>
             <SelectContent className="bg-white">
@@ -129,20 +129,20 @@ export default function AuctionSearch() {
         </div>
 
         {/* Divider */}
-        <div className="h-8 w-px bg-gray-200" />
+        <div className="h-6 lg:h-8 w-px bg-gray-200 flex-shrink-0" />
 
         {/* Amenities Popover */}
-        <div className="lg:px-2">
+        <div className="flex-shrink-0">
           <Popover>
             <PopoverTrigger asChild>
               <Button
                 variant="ghost"
-                className="border-0 focus:ring-0 focus:ring-offset-0 text-sm font-medium p-0 h-auto"
+                className="border-0 focus:ring-0 focus:ring-offset-0 text-xs lg:text-sm font-medium p-1 lg:p-2 h-auto"
               >
-                <div className="flex items-center gap-2">
-                  <SlidersHorizontal className="w-4 h-4 text-gray-500" />
-                  <span>Amenities</span>
-                  <ChevronDown className="w-4 h-4 text-gray-500" />
+                <div className="flex items-center gap-1">
+                  <SlidersHorizontal className="w-3 h-3 lg:w-4 lg:h-4 text-gray-500" />
+                  <span className="hidden lg:inline">Amenities</span>
+                  <ChevronDown className="w-3 h-3 lg:w-4 lg:h-4 text-gray-500" />
                 </div>
               </Button>
             </PopoverTrigger>
@@ -181,8 +181,8 @@ export default function AuctionSearch() {
         </div>
 
         {/* Search Button */}
-        <div className="min-w-[120px]">
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full w-full md:w-auto">
+        <div className="flex-shrink-0">
+          <Button className="bg-blue-600 hover:bg-blue-700 text-white px-3 lg:px-6 py-2 rounded-full text-xs lg:text-sm">
             Search
           </Button>
         </div>
@@ -192,8 +192,8 @@ export default function AuctionSearch() {
       <div className="md:hidden space-y-3">
         {/* Search Bar */}
         <div className="bg-white rounded-full shadow-lg border border-gray-200 p-2 flex items-center gap-2">
-          <div className="flex-1 flex items-center gap-2 px-4">
-            <Search className="w-5 h-5 text-gray-400" />
+          <div className="flex-1 flex items-center gap-2 px-2 sm:px-4">
+            <Search className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400" />
             <Input
               type="text"
               value={searchQuery}
@@ -213,7 +213,7 @@ export default function AuctionSearch() {
 
         {/* Filters Drawer */}
         <Drawer open={mobileFiltersOpen} onOpenChange={setMobileFiltersOpen}>
-          <DrawerContent className="p-4 bg-white">
+          <DrawerContent className="p-4 bg-white max-h-[90vh] overflow-y-auto">
             <div className="flex justify-between items-center mb-4">
               <h3 className="text-lg font-semibold">Filters</h3>
               <Button
@@ -225,7 +225,7 @@ export default function AuctionSearch() {
               </Button>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-4 pb-4">
               {/* Auction Type */}
               <div>
                 <label className="block text-sm font-medium mb-2">
@@ -298,7 +298,7 @@ export default function AuctionSearch() {
                 <label className="block text-sm font-medium mb-2">
                   Amenities
                 </label>
-                <div className="space-y-3 max-h-60 overflow-y-auto p-2 border rounded-lg">
+                <div className="space-y-3 max-h-60 overflow-y-auto p-3 border rounded-lg bg-gray-50">
                   {amenitiesList.map((amenity) => (
                     <div key={amenity} className="flex items-center space-x-2">
                       <Checkbox
@@ -317,10 +317,15 @@ export default function AuctionSearch() {
                     </div>
                   ))}
                 </div>
+                {selectedAmenities.length > 0 && (
+                  <p className="text-xs text-gray-500 mt-2">
+                    {selectedAmenities.length} amenities selected
+                  </p>
+                )}
               </div>
 
               <Button
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white mt-4"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white mt-6 py-3"
                 onClick={() => setMobileFiltersOpen(false)}
               >
                 Apply Filters
