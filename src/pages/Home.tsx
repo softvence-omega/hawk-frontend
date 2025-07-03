@@ -84,7 +84,7 @@ const Home = () => {
       {/* home section card  */}
       <AuctionSearch />
       <CommonWrapper>
-        <div className="grid grid-cols-3 ">
+        <div className="grid lg:grid-cols-3 ">
           {cardData.map((item) => (
             <HouseCard property={item}></HouseCard>
           ))}

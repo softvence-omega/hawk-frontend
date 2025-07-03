@@ -26,9 +26,9 @@ const Navbar: React.FC = () => {
   // };
 
   return (
-    <nav className="bg-white/80 shadow-lg sticky top-0">
+    <nav className="bg-white/80 shadow-lg sticky top-0 z-100">
       <CommonWrapper>
-        <div className=" mx-auto px-4 sm:px-6 lg:px-8 py-[12px]">
+        <div className=" mx-auto px-4 sm:px-6 lg:px-8 lg:py-[12px]">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex-shrink-0">
@@ -37,7 +37,9 @@ const Navbar: React.FC = () => {
                 className="text-black text-2xl font-bold flex items-center gap-3"
               >
                 <img src={logoImg} alt="" className="w-8 h-8" />
-                <span className="font-bricolage">Az Deal Hub</span>
+                <span className="font-bricolage hidden lg:block">
+                  Az Deal Hub
+                </span>
               </Link>
             </div>
 
@@ -81,14 +83,14 @@ const Navbar: React.FC = () => {
               </Link>
             </div>
             <div>
-              <div className="flex gap-[10px]">
+              <div className="flex lg:gap-[10px]">
                 <button
-                  className="border px-[24px] py-[8px] rounded cursor-pointer"
+                  className="border hidden lg:block lg:px-[24px] py-[8px] rounded cursor-pointer"
                   onClick={handleLogin}
                 >
                   Login/Register
                 </button>
-                <button className="border px-[24px] py-[8px] rounded bg-linear-to-r from-[#2F6DFD] to-[#0041D9] text-white">
+                <button className="border hidden lg:block px-[24px] py-[8px] rounded bg-linear-to-r from-[#2F6DFD] to-[#0041D9] text-white">
                   Get Comp
                 </button>
               </div>
@@ -105,7 +107,7 @@ const Navbar: React.FC = () => {
                   className="h-6 w-6"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke="currentColor"
+                  stroke="black"
                 >
                   {isOpen ? (
                     <path
@@ -128,35 +130,102 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       </CommonWrapper>
-
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div className="md:hidden fixed top-0 left-0 w-full h-full bg-white z-50">
+          <div className="flex justify-between items-center px-4 py-4 border-b">
             <Link
               to="/"
-              className="text-white block hover:bg-purple-700 px-3 py-2 rounded-md text-base font-medium"
+              className="text-black text-2xl font-bold flex items-center gap-3"
+              onClick={() => setIsOpen(false)}
+            >
+              <img src={logoImg} alt="" className="w-8 h-8" />
+              <span className="font-bricolage">Az Deal Hub</span>
+            </Link>
+            <button
+              onClick={toggleMenu}
+              type="button"
+              className="text-black hover:text-gray-700 focus:outline-none"
+            >
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor" // Use currentColor, not "black"
+              >
+                {isOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  />
+                )}
+              </svg>
+            </button>
+          </div>
+          <div className="flex flex-col px-6 py-6 space-y-4">
+            <Link
+              to="/"
+              className="text-black text-lg font-medium"
+              onClick={() => setIsOpen(false)}
             >
               Home
             </Link>
             <Link
               to="/about"
-              className="text-white block hover:bg-purple-700 px-3 py-2 rounded-md text-base font-medium"
+              className="text-black text-lg font-medium"
+              onClick={() => setIsOpen(false)}
             >
-              About
+              About Us
             </Link>
             <Link
-              to="/services"
-              className="text-white block hover:bg-purple-700 px-3 py-2 rounded-md text-base font-medium"
+              to="/team"
+              className="text-black text-lg font-medium"
+              onClick={() => setIsOpen(false)}
             >
-              Services
+              Team
             </Link>
             <Link
               to="/contact"
-              className="text-white block hover:bg-purple-700 px-3 py-2 rounded-md text-base font-medium"
+              className="text-black text-lg font-medium"
+              onClick={() => setIsOpen(false)}
             >
               Contact
             </Link>
+            <Link
+              to="/blog"
+              className="text-black text-lg font-medium"
+              onClick={() => setIsOpen(false)}
+            >
+              Blog
+            </Link>
+            <Link
+              to="/auction"
+              className="text-black text-lg font-medium"
+              onClick={() => setIsOpen(false)}
+            >
+              Auction
+            </Link>
+            <button
+              className="border px-[24px] py-[8px] rounded cursor-pointer mt-4"
+              onClick={() => {
+                setIsOpen(false);
+                handleLogin();
+              }}
+            >
+              Login/Register
+            </button>
+            <button className="border px-[24px] py-[8px] rounded bg-gradient-to-r from-[#2F6DFD] to-[#0041D9] text-white">
+              Get Comp
+            </button>
           </div>
         </div>
       )}
