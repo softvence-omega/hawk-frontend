@@ -80,7 +80,6 @@ const Comp = () => {
                   <Select
                     value={propertyCondition}
                     onValueChange={setPropertyCondition}
-                    className="bg-white"
                   >
                     <SelectTrigger className="w-full">
                       <SelectValue />
@@ -107,14 +106,18 @@ const Comp = () => {
           {/* Analysis Results */}
           <div className="grid grid-cols-2 gap-3 sm:gap-4 mt-6 sm:mt-8">
             <div className="bg-gray-100 p-3 sm:p-4 rounded-lg">
-              <div className="text-xs sm:text-sm text-gray-600 mb-1">As-Is:</div>
+              <div className="text-xs sm:text-sm text-gray-600 mb-1">
+                As-Is:
+              </div>
               <div className="text-base sm:text-lg font-semibold">
                 ${analysisResults.asIs.toLocaleString()}
               </div>
             </div>
 
             <div className="bg-gray-100 p-3 sm:p-4 rounded-lg">
-              <div className="text-xs sm:text-sm text-gray-600 mb-1">Rehab Est:</div>
+              <div className="text-xs sm:text-sm text-gray-600 mb-1">
+                Rehab Est:
+              </div>
               <div className="text-base sm:text-lg font-semibold">
                 ${analysisResults.rehabEst.toLocaleString()}
               </div>
@@ -160,7 +163,7 @@ const Comp = () => {
               <SoldCompsCards key={idx} {...property} />
             ))}
           </div>
-          
+
           {/* Map Section */}
           <div className="h-[300px] sm:h-[400px] lg:h-[500px] mt-12 sm:mt-16 lg:mt-24">
             <iframe
@@ -175,7 +178,7 @@ const Comp = () => {
             ></iframe>
           </div>
         </div>
-        
+
         {/* cards section start */}
         <div className="lg:col-span-1 lg:mt-[64px]">
           {/* Place a Bid */}
