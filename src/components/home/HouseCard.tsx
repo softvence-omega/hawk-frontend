@@ -105,18 +105,18 @@ const HouseCard = ({ property }: { property: Property }) => {
               {formatCurrency(property.rehabEstimate)}
             </p>
           </div>
-          <div className="flex justify-between sm:gap-2 md:gap-4 items-center border-b border-gray-300 pb-2">
+          <div className="flex justify-between sm:gap-2 md:gap-4 col-span-2 items-center border-b border-gray-300 pb-2">
             <p className="text-gray-600 text-sm flex-shrink-0">ARV:</p>
             <p className="font-bold text-sm text-right">
               {formatCurrency(property.arv)}
             </p>
           </div>
-          <div className="flex justify-between sm:gap-2 md:gap-4 items-center border-b border-gray-300 pb-2">
+          {/* <div className="flex justify-between sm:gap-2 md:gap-4 items-center border-b border-gray-300 pb-2">
             <p className="text-gray-600 text-sm flex-shrink-0">75% Offer:</p>
             <p className="font-bold text-sm text-blue-600 text-right">
               {formatCurrency(property.offer)}
             </p>
-          </div>
+          </div> */}
         </div>
 
         {/* Bud Amount Section */}
