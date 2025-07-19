@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
               >
                 <img src={logoImg} alt="" className="w-8 h-8" />
                 <span className="font-bricolage hidden lg:block">
-                  Az Deal Hub
+                  Ez Deal Hub
                 </span>
               </Link>
             </div>
